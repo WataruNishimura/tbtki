@@ -52,4 +52,31 @@ export default {}
     transform: rotateY(0deg);
   }
 }
+
+@media print {
+  @page {
+    size: 91mm 55mm;
+    margin: 0;
+  }
+
+  .card-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .card {
+      position: relative;
+      width: 91mm;
+      height: 55mm;
+      padding: 5mm;
+      border: none;
+      transform: none;
+      backface-visibility: hidden;
+      page-break-before: always;
+    }
+  }
+}
 </style>
