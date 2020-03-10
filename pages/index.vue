@@ -1,82 +1,64 @@
-<template lang="pug">
-  .card-container
-    .card-profile
-      .card.card--front
-        p 種市慎太郎
-      .card.card--back
-        p Taneichi Shintaro
+<template>
+  <div class="container">
+    <div>
+      <logo />
+      <h1 class="title">
+        name
+      </h1>
+      <h2 class="subtitle">
+        description
+      </h2>
+      <div class="links">
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
+          Documentation
+        </a>
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          class="button--grey"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {}
+import Logo from '~/components/Logo.vue'
+export default {
+  components: {
+    Logo
+  }
+}
 </script>
 
-<style lang="scss">
-.card-container {
+<style>
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
 }
-
-.card-profile {
-  position: relative;
-  width: 91mm;
-  height: 55mm;
-
-  .card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 5mm;
-    border: 1px solid black;
-    transition: 0.8s;
-    backface-visibility: hidden;
-
-    &--front {
-    }
-
-    &--back {
-      transform: rotateY(180deg);
-    }
-  }
-
-  &:hover .card--front {
-    transform: rotateY(180deg);
-  }
-
-  &:hover .card--back {
-    transform: rotateY(0deg);
-  }
+.title {
+  display: block;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 100px;
+  font-weight: 300;
+  color: #35495e;
+  letter-spacing: 1px;
 }
-
-@media print {
-  @page {
-    size: 91mm 55mm;
-    margin: 0;
-  }
-
-  .card-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-
-    .card {
-      position: relative;
-      width: 91mm;
-      height: 55mm;
-      padding: 5mm;
-      border: none;
-      transform: none;
-      backface-visibility: hidden;
-      page-break-before: always;
-    }
-  }
+.subtitle {
+  padding-bottom: 15px;
+  font-size: 42px;
+  font-weight: 300;
+  color: #526488;
+  word-spacing: 5px;
+}
+.links {
+  padding-top: 15px;
 }
 </style>
