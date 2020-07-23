@@ -2,6 +2,7 @@
 .container
   img(src="/img/profile.jpg", alt="tbtki character image").profile-image
   h1.title tabatakai's portfolio
+  p.description planning and producing creative for generation Z.
   ul.social-links
     li.social-link
       fa(:icon="faTwitter").social-link__icon
@@ -56,6 +57,11 @@ export default {
   min-height: 100vh;
   margin: 0 auto;
   text-align: center;
+}
+
+.description {
+  margin: 1rem 0;
+  font-size: 1.1rem;
 }
 
 .profile-image {

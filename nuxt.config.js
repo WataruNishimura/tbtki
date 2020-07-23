@@ -13,7 +13,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: "This is tabatakai's portfolio website."
+        content: 'planning and producing creative for generation Z.'
       },
       {
         hid: 'og:site_name',
@@ -34,7 +34,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: "This is tabatakai's portfolio website."
+        content: 'planning and producing creative for generation Z.'
       },
       {
         hid: 'og:image',
