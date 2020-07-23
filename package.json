@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-env-vscode",
+  "name": "tabatakai-portfolio-website",
   "version": "1.0.0",
-  "description": "My badass Nuxt.js project",
+  "description": "This is tabatakai's portfolio website.",
   "author": "wataru.nishimura@nnkk.work",
   "private": true,
   "scripts": {
@@ -21,10 +21,14 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
     "@nuxtjs/style-resources": "^1.0.0",
     "css-loader": "^3.4.2",
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
     "package.json": "^2.0.1",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",

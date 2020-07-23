@@ -1,64 +1,93 @@
-<template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        name
-      </h1>
-      <h2 class="subtitle">
-        description
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.container
+  img(src="/img/profile.jpg", alt="tbtki character image").profile-image
+  h1.title tabatakai's portfolio
+  ul.social-links
+    li.social-link
+      fa(:icon="faTwitter").social-link__icon
+      a(href="https://twitter.com/tbt_ki").social-link__text tbt_ki
+    li.social-link
+      fa(:icon="faFacebook").social-link__icon
+      a(href="https://facebook.com/tbtki").social-link__text tbtki
+    li.social-link
+      fa(:icon="faInstagram").social-link__icon
+      a(href="https://instagram.com/tbt_ki").social-link__text tbt_ki
+    li.social-link
+      fa(:icon="faPinterest").social-link__icon
+      a(href="https://pinterest.jp/tbt_ki").social-link__text tbt_ki
+  .contact-section
+    h2 Contect me
+    p
+      a(href="mailto:tbtki@irenkakotan.co.jp") tbtki@irenkakotan.co.jp
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+  faPinterest
+} from '@fortawesome/free-brands-svg-icons'
+
 export default {
-  components: {
-    Logo
+  computed: {
+    faTwitter() {
+      return faTwitter
+    },
+    faFacebook() {
+      return faFacebook
+    },
+    faInstagram() {
+      return faInstagram
+    },
+    faPinterest() {
+      return faPinterest
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0 auto;
   text-align: center;
 }
-.title {
-  display: block;
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 100px;
-  font-weight: 300;
-  color: #35495e;
-  letter-spacing: 1px;
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    height: 50%;
+  }
 }
-.subtitle {
-  padding-bottom: 15px;
-  font-size: 42px;
-  font-weight: 300;
-  color: #526488;
-  word-spacing: 5px;
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  text-align: left;
 }
-.links {
-  padding-top: 15px;
+
+.social-link {
+  margin: 0.8rem;
+  &__icon {
+    margin-right: 0.4rem;
+  }
+}
+
+.svg-inline--fa.fa-w-14 {
+  width: 1em;
 }
 </style>
