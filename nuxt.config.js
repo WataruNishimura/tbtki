@@ -93,7 +93,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources', 'nuxt-fontawesome'],
+  modules: ['nuxt-svg-loader', '@nuxtjs/style-resources', 'nuxt-fontawesome'],
   /*
    ** Build configuration
    */
